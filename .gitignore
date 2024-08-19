@@ -1,0 +1,8 @@
+
+# testing
+.venv
+.todo
+pyrightconfig.json
+
+# secrets
+./persistence/constants.py
