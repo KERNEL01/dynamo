@@ -1,0 +1,28 @@
+
+
+import discord
+from typing import List
+import os
+
+
+""" This file is basically your settings for the bot. It also contains some other useful constants. """
+
+
+# You can use a .env file if you like, or just specify it below.
+DISCORD_TOKEN_WITHOUT_ENV: str = "REPLACE ME WITH UR DISCORD BOT TOKEN"
+DISCORD_TOKEN: str = os.environ.get('DISCORD_TOKEN', DISCORD_TOKEN_WITHOUT_ENV)
+
+# Same thing with the Steamcommunity API
+STEAM_COMMUNITY_APIKEY_WITHOUT_ENV: str = "REPLACE ME WITH UR STEAMCOMMUNITY API KEY"
+STEAM_COMMUNITY_APIKEY: str = os.environ.get('STEAMCOMMUNITY_API_KEY', STEAM_COMMUNITY_APIKEY_WITHOUT_ENV)
+
+
+# Discord uses intents to limit the functionality of your bot. You'll need to change this depending on functionality you add with Cogs.
+# Since you have so many users in your discord, you'll actually not be able to claim all Intents without some verification with Discord.
+DISCORD_INTENT = discord.Intents.all()
+
+# This is for the tree sync. You can specify multiple servers here and when this bot is started, the Commandtree will update instantly.
+# Note: Please remove this ID and replace with your own.
+DISCORD_SERVERS: List[int] = [
+    1131070906693861427
+]
